@@ -2,6 +2,7 @@ use rand::{seq::SliceRandom, rng};
 
 pub const BOARD_DIM: usize = 5;
 
+#[derive(Clone)]
 pub struct Board {
     tiles: [[TileValue; BOARD_DIM]; BOARD_DIM],
 }
@@ -71,10 +72,6 @@ impl Board {
         }
     }
 
-    // pub fn create_hidden(&mut self) {
-    //     self.tiles = [[TileValue::Hidden; BOARD_DIM]; BOARD_DIM];
-    // }
-
     pub fn get_row_sums(&self) -> [SumData; BOARD_DIM] {
         let mut row_sums = [SumData { value_sum: 0, voltorb_count: 0 }; BOARD_DIM];
 
@@ -108,4 +105,34 @@ impl Board {
         }
         col_sums
     }
+
+    pub fn get_hidden_tile_indices(&self) -> Vec<(usize, usize)> {
+        let mut hidden_tiles = Vec::new();
+        for i in 0..BOARD_DIM {
+            for j in 0..BOARD_DIM {
+                if self.tiles[i][j] == TileValue::Hidden {
+                    hidden_tiles.push((i, j));
+                }
+            }
+        }
+        hidden_tiles
+    }
+
+    // pub fn get_tile_counts(&self) -> (usize, usize, usize) {
+    //     let mut num_twos = 0;
+    //     let mut num_threes = 0;
+    //     let mut num_voltorbs = 0;
+
+    //     for i in 0..BOARD_DIM {
+    //         for j in 0..BOARD_DIM {
+    //             match self.tiles[i][j] {
+    //                 TileValue::Two => num_twos += 1,
+    //                 TileValue::Three => num_threes += 1,
+    //                 TileValue::Voltorb => num_voltorbs += 1,
+    //                 _ => {}
+    //             }
+    //         }
+    //     }
+    //     (num_twos, num_threes, num_voltorbs)
+    // }
 }

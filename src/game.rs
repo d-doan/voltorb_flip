@@ -9,7 +9,7 @@ pub enum GameState {
 
 pub struct Game {
     score: u32,
-    curr_board: Board,
+    pub curr_board: Board,
     sol_board: Board,
     row_sums : [SumData; BOARD_DIM],
     col_sums : [SumData; BOARD_DIM],
