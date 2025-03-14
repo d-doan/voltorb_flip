@@ -1,10 +1,11 @@
 use rand::{seq::SliceRandom, rng};
 
-pub const BOARD_DIM: usize = 5;
+// pub const BOARD_DIM: usize = 5;
 
 #[derive(Clone)]
 pub struct Board {
-    tiles: [[TileValue; BOARD_DIM]; BOARD_DIM],
+    tiles: Vec<Vec<TileValue>>,
+    board_dim: usize
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -24,10 +25,15 @@ pub struct SumData {
 
 impl Board {
 
-    pub fn new(default_value: TileValue) -> Board {
+    pub fn new(board_dim: usize, default_value: TileValue) -> Board {
         Board {
-            tiles: [[default_value; BOARD_DIM]; BOARD_DIM],
+            tiles: vec![vec![default_value; board_dim]; board_dim],
+            board_dim
         }
+    }
+
+    pub fn get_board_dim(&self) -> usize {
+        self.board_dim
     }
 
     pub fn get_val(&self, i: usize, j: usize) -> TileValue {
@@ -48,15 +54,15 @@ impl Board {
 
         // get all board positions and randomize
         let mut positions: Vec<(usize, usize)> = Vec::new();
-        for row in 0..BOARD_DIM {
-            for col in 0..BOARD_DIM {
+        for row in 0..self.board_dim {
+            for col in 0..self.board_dim {
                 positions.push((row, col));
             }
         }
         positions.shuffle(&mut rng());
         positions.truncate(total_non_ones);
 
-        self.tiles = [[TileValue::One; BOARD_DIM]; BOARD_DIM];
+        self.tiles = vec![vec![TileValue::One; self.board_dim]; self.board_dim];
         for (row, col) in positions {
             let to_place = if num_twos > 0 {
                 num_twos -= 1;
@@ -72,11 +78,11 @@ impl Board {
         }
     }
 
-    pub fn get_row_sums(&self) -> [SumData; BOARD_DIM] {
-        let mut row_sums = [SumData { value_sum: 0, voltorb_count: 0 }; BOARD_DIM];
+    pub fn get_row_sums(&self) -> Vec<SumData> {
+        let mut row_sums = vec![SumData { value_sum: 0, voltorb_count: 0 }; self.board_dim];
 
-        for row in 0..BOARD_DIM {
-            for col in 0..BOARD_DIM {
+        for row in 0..self.board_dim {
+            for col in 0..self.board_dim {
                 match self.tiles[row][col] {
                     TileValue::One => row_sums[row].value_sum += 1,
                     TileValue::Two => row_sums[row].value_sum += 2,
@@ -89,11 +95,11 @@ impl Board {
         row_sums
     }
 
-    pub fn get_col_sums(&self) -> [SumData; BOARD_DIM] {
-        let mut col_sums = [SumData { value_sum: 0, voltorb_count: 0 }; BOARD_DIM];
+    pub fn get_col_sums(&self) -> Vec<SumData> {
+        let mut col_sums = vec![SumData { value_sum: 0, voltorb_count: 0 }; self.board_dim];
 
-        for col in 0..BOARD_DIM {
-            for row in 0..BOARD_DIM {
+        for col in 0..self.board_dim {
+            for row in 0..self.board_dim {
                 match self.tiles[row][col] {
                     TileValue::One => col_sums[col].value_sum += 1,
                     TileValue::Two => col_sums[col].value_sum += 2,
@@ -108,8 +114,8 @@ impl Board {
 
     pub fn get_hidden_tile_indices(&self) -> Vec<(usize, usize)> {
         let mut hidden_tiles = Vec::new();
-        for i in 0..BOARD_DIM {
-            for j in 0..BOARD_DIM {
+        for i in 0..self.board_dim {
+            for j in 0..self.board_dim {
                 if self.tiles[i][j] == TileValue::Hidden {
                     hidden_tiles.push((i, j));
                 }
@@ -117,22 +123,4 @@ impl Board {
         }
         hidden_tiles
     }
-
-    // pub fn get_tile_counts(&self) -> (usize, usize, usize) {
-    //     let mut num_twos = 0;
-    //     let mut num_threes = 0;
-    //     let mut num_voltorbs = 0;
-
-    //     for i in 0..BOARD_DIM {
-    //         for j in 0..BOARD_DIM {
-    //             match self.tiles[i][j] {
-    //                 TileValue::Two => num_twos += 1,
-    //                 TileValue::Three => num_threes += 1,
-    //                 TileValue::Voltorb => num_voltorbs += 1,
-    //                 _ => {}
-    //             }
-    //         }
-    //     }
-    //     (num_twos, num_threes, num_voltorbs)
-    // }
 }

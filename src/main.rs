@@ -8,9 +8,24 @@ use game::GameState;
 use solver::baseline;
 
 fn main() {
-    let mut game = Game::new();
 
     println!("Welcome to Dan's Casino!");
+
+    println!("Enter the board dimension for this game");
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+
+    let board_dim_input: usize = match input.trim().parse() {
+        Ok(num) => num,
+        Err(_) => {
+            println!("Invalid input! Please enter a valid number.");
+            return;
+        }
+    };
+
+    let mut game = Game::new(board_dim_input);
+    let board_dim = game.curr_board.get_board_dim();
+
     println!("\nCurrent Board:");
     game.display_board();
 
@@ -33,17 +48,17 @@ fn main() {
 
         let mut parts = input.trim().split_whitespace();
         let row: usize = match parts.next().and_then(|r| r.parse().ok()) {
-            Some(num) if num < board::BOARD_DIM => num,
+            Some(num) if num < board_dim => num,
             _ => {
-                println!("Invalid row! Enter a number between 0 and {}.", board::BOARD_DIM - 1);
+                println!("Invalid row! Enter a number between 0 and {}.", board_dim - 1);
                 continue;
             }
         };
 
         let col: usize = match parts.next().and_then(|c| c.parse().ok()) {
-            Some(num) if num < board::BOARD_DIM => num,
+            Some(num) if num < board_dim => num,
             _ => {
-                println!("Invalid column! Enter a number between 0 and {}.", board::BOARD_DIM - 1);
+                println!("Invalid column! Enter a number between 0 and {}.", board_dim - 1);
                 continue;
             }
         };

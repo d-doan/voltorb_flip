@@ -1,4 +1,4 @@
-use crate::board::{Board, TileValue, SumData, BOARD_DIM};
+use crate::board::{Board, SumData, TileValue};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum GameState {
@@ -11,19 +11,20 @@ pub struct Game {
     score: u32,
     pub curr_board: Board,
     sol_board: Board,
-    row_sums : [SumData; BOARD_DIM],
-    col_sums : [SumData; BOARD_DIM],
+    row_sums : Vec<SumData>,
+    col_sums : Vec<SumData>,
     state : GameState
 }
 
 impl Game {
-    pub fn new() -> Game {
-        let mut sol_board = Board::new(TileValue::Hidden);
+    pub fn new(board_dim: usize) -> Game {
+        let mut sol_board = Board::new(board_dim, TileValue::Hidden);
         sol_board.create_solution();
+
         let row_sums = sol_board.get_row_sums();
         let col_sums = sol_board.get_col_sums();
 
-        let curr_board = Board::new(TileValue::Hidden);
+        let curr_board = Board::new(board_dim, TileValue::Hidden);
 
         Game {
             score: 0,
@@ -38,8 +39,9 @@ impl Game {
     // checks for all 2 and 3 uncovered to win
     // if 1s are covered that's fine
     pub fn check_sol(&mut self) -> GameState {
-        for i in 0..BOARD_DIM {
-            for j in 0..BOARD_DIM {
+        let board_dim = self.curr_board.get_board_dim();
+        for i in 0..board_dim {
+            for j in 0..board_dim {
                 let sol_val = self.sol_board.get_val(i, j);
                 let curr_val = self.curr_board.get_val(i, j);
 
@@ -85,32 +87,33 @@ impl Game {
 
     // formatting functions
     pub fn display_board(&self) {
+        let board_dim = self.curr_board.get_board_dim();
         let green_square = "🟩";
         let numbers = [" ", "1️⃣", "2️⃣", "3️⃣", "💥"];
 
         // Offset for row labels
         print!("     ");
-        for col in 0..BOARD_DIM {
+        for col in 0..board_dim {
             print!(" S:{:<2}  ", self.col_sums[col].value_sum);
         }
         println!();
 
         print!("     ");
-        for col in 0..BOARD_DIM {
+        for col in 0..board_dim {
             print!(" V:{:<2}  ", self.col_sums[col].voltorb_count);
         }
         println!();
 
         print!("     ");
-        for _ in 0..BOARD_DIM {
+        for _ in 0..board_dim {
             print!("-------");
         }
         println!();
 
-        for row in 0..BOARD_DIM {
+        for row in 0..board_dim {
             // rows
             print!("R{} |", row);
-            for col in 0..BOARD_DIM {
+            for col in 0..board_dim {
                 let tile = self.curr_board.get_val(row, col);
                 let symbol = match tile {
                     TileValue::Hidden => green_square.to_string(),
@@ -125,36 +128,18 @@ impl Game {
         }
 
         print!("     ");
-        for _ in 0..BOARD_DIM {
+        for _ in 0..board_dim {
             print!("-------");
         }
         println!();
 
         // column numbers at bottom
         print!("     ");
-        for col in 0..BOARD_DIM {
+        for col in 0..board_dim {
             print!(" C{}    ", col);
         }
         println!();
     }
-
-    // pub fn display_sums(&self) {
-    //     println!("Row Sums:");
-    //     for i in 0..BOARD_DIM {
-    //         println!(
-    //             "Row {}: Sum = {}, Voltorbs = {}",
-    //             i, self.row_sums[i].value_sum, self.row_sums[i].voltorb_count
-    //         );
-    //     }
-
-    //     println!("\nColumn Sums:");
-    //     for i in 0..BOARD_DIM {
-    //         println!(
-    //             "Column {}: Sum = {}, Voltorbs = {}",
-    //             i, self.col_sums[i].value_sum, self.col_sums[i].voltorb_count
-    //         );
-    //     }
-    // }
 
     pub fn display_score(&self) {
         println!("Your score is: {}", self.score);
