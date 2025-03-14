@@ -5,7 +5,7 @@ mod solver;
 use std::io;
 use game::Game;
 use game::GameState;
-use solver::baseline;
+use solver::exhaustive;
 
 fn main() {
 
@@ -39,11 +39,6 @@ fn main() {
         if input.eq_ignore_ascii_case("q") {
             println!("99% of gamblers quit before they strike it big 💎🚀🔥");
             break;
-        }
-
-        if input.eq_ignore_ascii_case("dumb") {
-            let next_move = baseline(&mut game);
-            println!("next move: ({}, {})", next_move.0, next_move.1);
         }
 
         let mut parts = input.trim().split_whitespace();

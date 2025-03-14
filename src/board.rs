@@ -23,6 +23,19 @@ pub struct SumData {
     pub voltorb_count : u8
 }
 
+impl TileValue {
+    pub fn to_value(self) -> u8 {
+        match self {
+            TileValue::Hidden => 0,
+            TileValue::One => 1,
+            TileValue::Two => 2,
+            TileValue::Three => 3,
+            TileValue::Voltorb => 66,
+        }
+    }
+}
+
+
 impl Board {
 
     pub fn new(board_dim: usize, default_value: TileValue) -> Board {
@@ -30,6 +43,10 @@ impl Board {
             tiles: vec![vec![default_value; board_dim]; board_dim],
             board_dim
         }
+    }
+
+    pub fn get_tiles(&self) -> &Vec<Vec<TileValue>> {
+        &self.tiles
     }
 
     pub fn get_board_dim(&self) -> usize {

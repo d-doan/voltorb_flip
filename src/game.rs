@@ -11,8 +11,8 @@ pub struct Game {
     score: u32,
     pub curr_board: Board,
     sol_board: Board,
-    row_sums : Vec<SumData>,
-    col_sums : Vec<SumData>,
+    pub row_sums : Vec<SumData>,
+    pub col_sums : Vec<SumData>,
     state : GameState
 }
 
