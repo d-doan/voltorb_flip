@@ -1,4 +1,4 @@
-use crate::board::{Board, SumData, TileValue};
+use crate::board::{Board, SumData, TileValue, PremadeBoard};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum GameState {
@@ -17,17 +17,24 @@ pub struct Game {
 }
 
 impl Game {
-    pub fn new(board_dim: usize) -> Game {
-        let mut sol_board = Board::new(board_dim, TileValue::Hidden);
-        sol_board.create_solution();
+    pub fn new(board_dim: usize, custom_board: Option<PremadeBoard>) -> Game {
+        let (sol_board, curr_board) = match custom_board {
+            Some(premade) => (premade.solution, premade.initial),
+            None => {
+                let mut generated_board = Board::new(board_dim, TileValue::Hidden);
+                generated_board.create_solution();
+                let curr_board = Board::new(board_dim, TileValue::Hidden);
+                (generated_board, curr_board)
+            }
+        };
 
         let row_sums = sol_board.get_row_sums();
         let col_sums = sol_board.get_col_sums();
 
-        let curr_board = Board::new(board_dim, TileValue::Hidden);
+        // let curr_board = Board::new(board_dim, TileValue::Hidden);
 
         Game {
-            score: 0,
+            score: 1,
             curr_board,
             sol_board,
             row_sums,
@@ -89,7 +96,11 @@ impl Game {
     pub fn display_board(&self) {
         let board_dim = self.curr_board.get_board_dim();
         let green_square = "🟩";
+<<<<<<< HEAD
         let numbers = [" ", "1️⃣", "2️⃣", "3️⃣", "💥", "💀"];
+=======
+        let numbers = [" ", " 1️⃣   ", " 2️⃣   ", " 3️⃣   ", "💥"];
+>>>>>>> 420fd1dbbc41e614220c04b735796c4a9d028424
 
         // Offset for row labels
         print!("     ");

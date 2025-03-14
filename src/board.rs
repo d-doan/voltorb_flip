@@ -23,6 +23,13 @@ pub struct SumData {
     pub voltorb_count : u8
 }
 
+#[derive(Clone)]
+pub struct PremadeBoard {
+    pub solution: Board,
+    pub initial: Board,
+    board_dim: usize
+}
+
 impl TileValue {
     pub fn to_value(self) -> u8 {
         match self {
@@ -46,6 +53,11 @@ impl TileValue {
     }
 }
 
+impl PremadeBoard{
+    pub fn get_board_dim(&self) -> usize {
+        self.board_dim
+    }
+}
 
 impl Board {
 
@@ -140,15 +152,42 @@ impl Board {
         col_sums
     }
 
-    // pub fn get_hidden_tile_indices(&self) -> Vec<(usize, usize)> {
-    //     let mut hidden_tiles = Vec::new();
-    //     for i in 0..self.board_dim {
-    //         for j in 0..self.board_dim {
-    //             if self.tiles[i][j] == TileValue::Hidden {
-    //                 hidden_tiles.push((i, j));
-    //             }
-    //         }
-    //     }
-    //     hidden_tiles
-    // }
+    pub fn get_hidden_tile_indices(&self) -> Vec<(usize, usize)> {
+        let mut hidden_tiles = Vec::new();
+        for i in 0..self.board_dim {
+            for j in 0..self.board_dim {
+                if self.tiles[i][j] == TileValue::Hidden {
+                    hidden_tiles.push((i, j));
+                }
+            }
+        }
+        hidden_tiles
+    }
+
+    pub fn from_tiles(tiles: Vec<Vec<TileValue>>) -> Board {
+        let board_dim = tiles.len();
+        Board {tiles, board_dim}
+    }
+
+    pub fn premade_boards() -> Vec<PremadeBoard> {
+        vec![
+            PremadeBoard {
+                solution: Board::from_tiles(vec![
+                    vec![TileValue::Two,  TileValue::Three,  TileValue::One,  TileValue::Two,    TileValue::One],
+                    vec![TileValue::One,  TileValue::Voltorb,TileValue::Two,  TileValue::One,    TileValue::One],
+                    vec![TileValue::Two,  TileValue::One,    TileValue::Three,TileValue::Three,  TileValue::One],
+                    vec![TileValue::Three,TileValue::Voltorb,TileValue::One,  TileValue::One,    TileValue::One],
+                    vec![TileValue::One,  TileValue::Two,    TileValue::Two,  TileValue::Voltorb,TileValue::Voltorb]
+                ]),
+                initial: Board::from_tiles(vec![
+                    vec![TileValue::Two,  TileValue::Three, TileValue::One,  TileValue::Two,   TileValue::One],
+                    vec![TileValue::One,  TileValue::Hidden,TileValue::Two,  TileValue::One,   TileValue::Hidden],
+                    vec![TileValue::Two,  TileValue::One,   TileValue::Three,TileValue::Three, TileValue::One],
+                    vec![TileValue::Three,TileValue::Hidden,TileValue::One,  TileValue::Hidden,TileValue::Hidden],
+                    vec![TileValue::One,  TileValue::Hidden,TileValue::Two,  TileValue::Hidden,TileValue::Hidden]
+                ]),
+                board_dim: 5
+            }
+        ]
+    }
 }
