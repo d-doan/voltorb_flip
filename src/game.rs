@@ -89,7 +89,7 @@ impl Game {
     pub fn display_board(&self) {
         let board_dim = self.curr_board.get_board_dim();
         let green_square = "🟩";
-        let numbers = [" ", "1️⃣", "2️⃣", "3️⃣", "💥"];
+        let numbers = [" ", "1️⃣", "2️⃣", "3️⃣", "💥", "💀"];
 
         // Offset for row labels
         print!("     ");
@@ -121,6 +121,7 @@ impl Game {
                     TileValue::Two => numbers[2].to_string(),
                     TileValue::Three => numbers[3].to_string(),
                     TileValue::Voltorb => numbers[4].to_string(),
+                    TileValue::ERR => numbers[5].to_string(),
                 };
                 print!(" {:^4} ", symbol);
             }

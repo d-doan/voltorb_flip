@@ -1,6 +1,5 @@
 use rand::{seq::SliceRandom, rng};
 
-// pub const BOARD_DIM: usize = 5;
 
 #[derive(Clone)]
 pub struct Board {
@@ -8,13 +7,14 @@ pub struct Board {
     board_dim: usize
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum TileValue {
     Hidden = 0,
     One = 1,
     Two = 2,
     Three = 3,
     Voltorb = 66,   // arbitrary constant for easy debugging
+    ERR = 255,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -31,6 +31,17 @@ impl TileValue {
             TileValue::Two => 2,
             TileValue::Three => 3,
             TileValue::Voltorb => 66,
+            TileValue::ERR => 255,
+        }
+    }
+    pub fn to_enum(value: u8) -> TileValue {
+        match value {
+            0 => TileValue::Hidden,
+            1 => TileValue::One,
+            2 => TileValue::Two,
+            3 => TileValue::Three,
+            66 => TileValue::Voltorb,
+            _ => TileValue::ERR,
         }
     }
 }
@@ -129,15 +140,15 @@ impl Board {
         col_sums
     }
 
-    pub fn get_hidden_tile_indices(&self) -> Vec<(usize, usize)> {
-        let mut hidden_tiles = Vec::new();
-        for i in 0..self.board_dim {
-            for j in 0..self.board_dim {
-                if self.tiles[i][j] == TileValue::Hidden {
-                    hidden_tiles.push((i, j));
-                }
-            }
-        }
-        hidden_tiles
-    }
+    // pub fn get_hidden_tile_indices(&self) -> Vec<(usize, usize)> {
+    //     let mut hidden_tiles = Vec::new();
+    //     for i in 0..self.board_dim {
+    //         for j in 0..self.board_dim {
+    //             if self.tiles[i][j] == TileValue::Hidden {
+    //                 hidden_tiles.push((i, j));
+    //             }
+    //         }
+    //     }
+    //     hidden_tiles
+    // }
 }
