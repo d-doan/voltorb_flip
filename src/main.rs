@@ -52,7 +52,9 @@ fn main() {
     let board_dim = game.curr_board.get_board_dim();
 
     println!("\nCurrent Board:");
-    game.display_board();
+
+    let baseline: ((usize, usize), f32) = exhaustive(&mut game);
+    game.display_board(baseline);
 
     loop {
         println!("\nEnter row and column to flip (e.g., '1 2') or type 'q' to quit:");
@@ -86,7 +88,8 @@ fn main() {
         let result = game.click(row, col);
 
         println!("\nCurrent Board:");
-        game.display_board();
+        let baseline: ((usize, usize), f32) = exhaustive(&mut game);
+        game.display_board(baseline);
 
         match result {
             GameState::Won => {

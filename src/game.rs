@@ -93,7 +93,7 @@ impl Game {
     // }
 
     // formatting functions
-    pub fn display_board(&self) {
+    pub fn display_board(&self, guess: ((usize, usize), f32)) {
         let board_dim = self.curr_board.get_board_dim();
         let green_square = "🟩";
         let numbers = [" ", " 1️⃣   ", " 2️⃣   ", " 3️⃣   ", "💥", "💀"];
@@ -147,6 +147,7 @@ impl Game {
             print!(" C{}    ", col);
         }
         println!();
+        println!{"Exhaustive says: \"You should pick ({} {}). This tile has a probability of {} to be safe.", guess.0.0, guess.0.1, guess.1}
     }
 
     pub fn display_score(&self) {
