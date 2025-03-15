@@ -1,8 +1,5 @@
-
-// defines all of the potential algorithms we have to get the next move
-// prioritizes correctness first until non-deterministic
 use crate::board::{SumData, TileValue};
-use crate::game::{Game, GameState};
+use crate::game::Game;
 
 use std::collections::{HashMap, HashSet};
 
@@ -47,7 +44,7 @@ pub fn exhaustive(game: &mut Game) -> ((usize, usize), f32) {
     return (flip, safest);
 }
 
-pub fn get_unflipped_tiles(tiles: &Vec<Vec<TileValue>>) -> Vec<(usize, usize)> {
+fn get_unflipped_tiles(tiles: &Vec<Vec<TileValue>>) -> Vec<(usize, usize)> {
     let mut unflipped: Vec<(usize, usize)> = Vec::new();
     for (r, row) in tiles.iter().enumerate() {
         for (c, &tile) in row.iter().enumerate() {
@@ -59,7 +56,7 @@ pub fn get_unflipped_tiles(tiles: &Vec<Vec<TileValue>>) -> Vec<(usize, usize)> {
     return unflipped;
 }
 
-pub fn is_board_valid(tiles: &Vec<Vec<TileValue>>, rows: &Vec<SumData>, cols: &Vec<SumData>)
+fn is_board_valid(tiles: &Vec<Vec<TileValue>>, rows: &Vec<SumData>, cols: &Vec<SumData>)
                         -> bool {
     let n = rows.len();
 
@@ -94,7 +91,7 @@ pub fn is_board_valid(tiles: &Vec<Vec<TileValue>>, rows: &Vec<SumData>, cols: &V
     return true;
 }
 
-pub fn get_possible_solutions(tiles: &Vec<Vec<TileValue>>,
+fn get_possible_solutions(tiles: &Vec<Vec<TileValue>>,
                                 rows: &Vec<SumData>, cols: &Vec<SumData>)
                                     -> Vec<Vec<Vec<TileValue>>> {
     let unflipped_tiles = get_unflipped_tiles(tiles);
@@ -118,8 +115,173 @@ pub fn get_possible_solutions(tiles: &Vec<Vec<TileValue>>,
 
 // ------------OPTIMIZED ALGO------------
 
+pub fn optimized_solver(game: &mut Game) -> ((usize, usize), f32) {
+    let tiles = game.curr_board.get_tiles();
+    let rows = &game.row_sums;
+    let cols = &game.col_sums;
 
-pub fn apply_rules(
+    let unflipped_tiles = get_unflipped_tiles(tiles);
+    let mut possible_values: HashMap<(usize, usize), HashSet<TileValue>> = HashMap::new();
+
+    // Initialize possible values for each unflipped tile
+    for &tile in &unflipped_tiles {
+        possible_values.insert(tile, HashSet::from([
+            TileValue::Voltorb, TileValue::One, TileValue::Two, TileValue::Three,
+        ]));
+    }
+
+    // Initialize row and column sums
+    let mut curr_row_sums = get_row_sums(tiles);
+    let mut curr_col_sums = get_col_sums(tiles);
+
+    // Iteratively prune until no further changes occur
+    loop {
+        let (is_pruned, safe_tile) = prune(tiles, rows, &mut curr_row_sums, cols, &mut curr_col_sums, &unflipped_tiles, &mut possible_values);
+        // println!("SAFE TILE: {}", safe_tile.0 );
+        if is_pruned {
+            if safe_tile != (usize::MAX, usize::MAX) {
+                // println!("dfyuiasdolfjnjksdfkslafklsnfklsanflksnflksnklfsnflknslfknsadlkfk");
+                return (safe_tile, 1.0);
+            }
+        }
+        else {
+            // println!("ENTERING EXHAUSTIVE");
+            return optimized_exhaustive(tiles, rows, &mut curr_row_sums, cols, &mut curr_col_sums, &mut possible_values);
+        }
+    }
+}
+
+fn prune(
+    tiles: &Vec<Vec<TileValue>>,
+    rows: &Vec<SumData>, curr_row_sums: &Vec<SumData>,
+    cols: &Vec<SumData>, curr_col_sums: &Vec<SumData>,
+    unflipped_tiles: &Vec<(usize, usize)>,
+    possible_values: &mut HashMap<(usize, usize), HashSet<TileValue>>,
+) -> (bool, (usize, usize)) {
+    let mut safe_tile = (usize::MAX, usize::MAX);
+    let mut is_pruned = false;
+
+    for &tile in unflipped_tiles {
+        let old_vals = possible_values.get(&tile).cloned().unwrap_or_default();
+
+        apply_rules(tile, tiles, rows, curr_row_sums, cols, curr_col_sums, possible_values);
+
+        let updated_vals = possible_values.get(&tile).cloned().unwrap_or_default();
+
+        if updated_vals != old_vals {
+            is_pruned = true;
+            possible_values.insert(tile, updated_vals.clone());
+        }
+
+        if !updated_vals.contains(&TileValue::Voltorb) && safe_tile == (usize::MAX, usize::MAX) {
+            safe_tile = tile;
+        }
+    }
+    return (is_pruned, safe_tile);
+}
+
+fn optimized_exhaustive(
+    tiles: &Vec<Vec<TileValue>>,
+    rows: &Vec<SumData>, curr_row_sums: &mut Vec<SumData>,
+    cols: &Vec<SumData>, curr_col_sums: &mut Vec<SumData>,
+    possible_values: &mut HashMap<(usize, usize), HashSet<TileValue>>,
+) -> ((usize, usize), f32) {
+    let mut safe_tiles: HashMap<(usize, usize), usize> = HashMap::new();
+
+    let solved_boards = opt_get_solutions(tiles, rows, curr_row_sums, cols, curr_col_sums, possible_values);
+    let num_boards = solved_boards.len();
+
+    // If no solutions exist, return default
+    if num_boards == 0 {
+        return ((usize::MAX, usize::MAX), 0.0);
+    }
+
+    let unflipped_tiles = get_unflipped_tiles(tiles);
+
+    for board in &solved_boards {
+        for (r, row) in board.iter().enumerate() {
+            for (c, &val) in row.iter().enumerate() {
+                let tile = (r, c);
+
+                if unflipped_tiles.contains(&tile) && val != TileValue::Voltorb {
+                    *safe_tiles.entry(tile).or_insert(0) += 1;
+                }
+            }
+        }
+    }
+
+    let mut safest = 0;
+    let mut flip = (usize::MAX, usize::MAX);
+
+    // print_safe_tiles(&safe_tiles, num_boards);
+
+    for (&tile, &safe_count) in &safe_tiles {
+        if safe_count > safest {
+            safest = safe_count;
+            flip = tile;
+        }
+    }
+    return (flip, safest as f32 / num_boards as f32);
+}
+
+fn opt_get_solutions(
+    tiles: &Vec<Vec<TileValue>>,
+    rows: &Vec<SumData>, curr_row_sums: &mut Vec<SumData>,
+    cols: &Vec<SumData>, curr_col_sums: &mut Vec<SumData>,
+    possible_values: &mut HashMap<(usize, usize), HashSet<TileValue>>,
+) -> Vec<Vec<Vec<TileValue>>> {
+    let unflipped_tiles = get_unflipped_tiles(tiles);
+
+    if unflipped_tiles.is_empty() {
+        if is_board_valid(tiles, rows, cols) {
+            return vec![tiles.clone()];
+        } else {
+            return vec![];
+        }
+    }
+
+    while prune(tiles, rows, curr_row_sums, cols, curr_col_sums, &unflipped_tiles, possible_values).0 {
+        // Prune modifies possible_values in place, so we don't need to update it manually
+    }
+
+    let mut result = Vec::new();
+    let first_unflipped_tile = unflipped_tiles[0];
+
+    if let Some(guesses) = possible_values.get(&first_unflipped_tile).cloned() {
+        for guess in guesses {
+            let mut new_tiles = tiles.clone();
+            new_tiles[first_unflipped_tile.0][first_unflipped_tile.1] = guess;
+
+            let mut next_possible_values = possible_values.clone();
+            // Clear possible values for guessed tile
+            next_possible_values.insert(first_unflipped_tile, HashSet::new());
+
+            let mut new_row_sums = curr_row_sums.clone();
+            let mut new_col_sums = curr_col_sums.clone();
+
+            if guess != TileValue::Voltorb {
+                new_row_sums[first_unflipped_tile.0].value_sum += guess.to_value();
+                new_col_sums[first_unflipped_tile.1].value_sum += guess.to_value();
+            } else {
+                new_row_sums[first_unflipped_tile.0].voltorb_count += 1;
+                new_col_sums[first_unflipped_tile.1].voltorb_count += 1;
+            }
+
+            result.extend(opt_get_solutions(
+                &new_tiles,
+                rows,
+                &mut new_row_sums,
+                cols,
+                &mut new_col_sums,
+                &mut next_possible_values,
+            ));
+        }
+    }
+    return result;
+}
+
+
+fn apply_rules(
     tile: (usize, usize), tiles: &Vec<Vec<TileValue>>,
     rows: &Vec<SumData>, curr_row_sums: &Vec<SumData>,
     cols: &Vec<SumData>, curr_col_sums: &Vec<SumData>,
@@ -254,3 +416,43 @@ fn rule4(
         }
     }
 }
+
+pub fn get_row_sums(tiles: &Vec<Vec<TileValue>>) -> Vec<SumData> {
+    let mut row_sums = vec![SumData { value_sum: 0, voltorb_count: 0 }; tiles.len()];
+
+    for (r, row) in tiles.iter().enumerate() {
+        for &tile in row {
+            match tile {
+                TileValue::One | TileValue::Two | TileValue::Three => {
+                    row_sums[r].value_sum += tile.to_value();
+                }
+                TileValue::Voltorb => {
+                    row_sums[r].voltorb_count += 1;
+                }
+                _ => {}
+            }
+        }
+    }
+    return row_sums;
+}
+
+pub fn get_col_sums(tiles: &Vec<Vec<TileValue>>) -> Vec<SumData> {
+    let n = tiles.len();
+    let mut col_sums = vec![SumData { value_sum: 0, voltorb_count: 0 }; n];
+
+    for c in 0..n {
+        for r in 0..n {
+            match tiles[r][c] {
+                TileValue::One | TileValue::Two | TileValue::Three => {
+                    col_sums[c].value_sum += tiles[r][c].to_value();
+                }
+                TileValue::Voltorb => {
+                    col_sums[c].voltorb_count += 1;
+                }
+                _ => {}
+            }
+        }
+    }
+    return col_sums;
+}
+
