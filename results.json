@@ -1,0 +1,29 @@
+[
+  {
+    "board_index": 0,
+    "best_move": [
+      1,
+      4
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 92.7147
+  },
+  {
+    "board_index": 1,
+    "best_move": [
+      1,
+      1
+    ],
+    "probability": 0.5,
+    "execution_time_ms": 0.4616
+  },
+  {
+    "board_index": 2,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 0.6666667,
+    "execution_time_ms": 220.1035
+  }
+]

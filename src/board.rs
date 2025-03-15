@@ -187,7 +187,37 @@ impl Board {
                     vec![TileValue::One,  TileValue::Hidden,TileValue::Two,  TileValue::Hidden,TileValue::Hidden]
                 ]),
                 board_dim: 5
-            }
+            },
+            PremadeBoard {
+                solution: Board::from_tiles(vec![
+                    vec![1, 1, 1, 1, 1],
+                    vec![1, 2, 1, 66, 1],
+                    vec![1, 1, 1, 1, 1],
+                    vec![1, 66, 1, 2, 1],
+                    vec![1, 1, 1, 1, 1]
+                ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+                initial: Board::from_tiles(vec![
+                    vec![1, 1, 1, 1, 1],
+                    vec![1, 0, 1, 0, 1],
+                    vec![1, 1, 1, 1, 1],
+                    vec![1, 0, 1, 0, 1],
+                    vec![1, 1, 1, 1, 1]
+                ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+                board_dim: 5
+            },
+            PremadeBoard {
+                solution: Board::from_tiles(vec![
+                    vec![66, 1, 1],
+                    vec![1, 66, 1],
+                    vec![1, 1, 66]
+                ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+                initial: Board::from_tiles(vec![
+                    vec![0, 0, 0],
+                    vec![0, 0, 0],
+                    vec![0, 0, 0]
+                ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+                board_dim: 3
+            },
         ]
     }
 }

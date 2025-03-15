@@ -1,14 +1,17 @@
 mod board;
 mod game;
 mod solver;
+mod simulation;
 
 use std::io;
 use board::Board;
 use game::Game;
 use game::GameState;
 use solver::exhaustive;
+use simulation::run_simulation;
 
 fn main() {
+    run_simulation();
 
     println!("Welcome to Dan's Casino!");
 
@@ -19,7 +22,7 @@ fn main() {
     
     let premade_boards = Board::premade_boards();
     let mut custom_board = None;
-    let mut board_dim_input = 5; // default
+    let mut board_dim_input = 3; // default
 
     if input.starts_with('r') {
         let parts: Vec<&str> = input.split_whitespace().collect();
@@ -48,12 +51,16 @@ fn main() {
         }
     }
 
+    // println!("{}", board_dim_input);
+
     let mut game = Game::new(board_dim_input, custom_board);
     let board_dim = game.curr_board.get_board_dim();
 
     println!("\nCurrent Board:");
 
-    let baseline: ((usize, usize), f32) = exhaustive(&mut game);
+    // println!("Running exhaustive solver...");
+    // let baseline: ((usize, usize), f32) = exhaustive(&mut game);
+    let baseline= ((0_usize, 0_usize), -1.0);
     game.display_board(baseline);
 
     loop {
@@ -88,7 +95,9 @@ fn main() {
         let result = game.click(row, col);
 
         println!("\nCurrent Board:");
-        let baseline: ((usize, usize), f32) = exhaustive(&mut game);
+        // println!("Running exhaustive solver...");
+        // let baseline: ((usize, usize), f32) = exhaustive(&mut game);
+        let baseline= ((0_usize, 0_usize), -1.0);
         game.display_board(baseline);
 
         match result {
