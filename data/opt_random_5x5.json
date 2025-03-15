@@ -6,7 +6,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.0967
+    "execution_time_ms": 0.1012
   },
   {
     "board_index": 1,
@@ -15,34 +15,34 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.8779
+    "execution_time_ms": 0.1422
   },
   {
     "board_index": 2,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.07770000000002
+    "execution_time_ms": 0.0736
   },
   {
     "board_index": 3,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.92749999999998
+    "execution_time_ms": 0.0916
   },
   {
     "board_index": 4,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.1427
+    "execution_time_ms": 0.1739
   },
   {
     "board_index": 5,
@@ -51,7 +51,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 223.02009999999999
+    "execution_time_ms": 0.0855
   },
   {
     "board_index": 6,
@@ -60,7 +60,7 @@
       1
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.5203
+    "execution_time_ms": 0.10969999999999999
   },
   {
     "board_index": 7,
@@ -69,7 +69,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.7164
+    "execution_time_ms": 0.1125
   },
   {
     "board_index": 8,
@@ -78,7 +78,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.69050000000001
+    "execution_time_ms": 0.1081
   },
   {
     "board_index": 9,
@@ -87,7 +87,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.5972
+    "execution_time_ms": 0.0953
   },
   {
     "board_index": 10,
@@ -96,25 +96,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.4331
+    "execution_time_ms": 0.1004
   },
   {
     "board_index": 11,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.5272
+    "execution_time_ms": 0.11120000000000001
   },
   {
     "board_index": 12,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.1628
+    "execution_time_ms": 0.12990000000000002
   },
   {
     "board_index": 13,
@@ -123,7 +123,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.9655
+    "execution_time_ms": 0.0994
   },
   {
     "board_index": 14,
@@ -132,7 +132,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.6825
+    "execution_time_ms": 0.12010000000000001
   },
   {
     "board_index": 15,
@@ -141,7 +141,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.3135
+    "execution_time_ms": 0.1442
   },
   {
     "board_index": 16,
@@ -150,7 +150,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.4744
+    "execution_time_ms": 0.0999
   },
   {
     "board_index": 17,
@@ -159,25 +159,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.865
+    "execution_time_ms": 0.09809999999999999
   },
   {
     "board_index": 18,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.5742
+    "execution_time_ms": 0.07490000000000001
   },
   {
     "board_index": 19,
     "best_move": [
       0,
-      0
+      3
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.654
+    "execution_time_ms": 0.09509999999999999
   },
   {
     "board_index": 20,
@@ -186,7 +186,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.7805
+    "execution_time_ms": 0.0997
   },
   {
     "board_index": 21,
@@ -195,7 +195,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.9862
+    "execution_time_ms": 0.1192
   },
   {
     "board_index": 22,
@@ -204,7 +204,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.1277
+    "execution_time_ms": 0.1281
   },
   {
     "board_index": 23,
@@ -213,7 +213,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.191
+    "execution_time_ms": 0.157
   },
   {
     "board_index": 24,
@@ -222,16 +222,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.0873
+    "execution_time_ms": 0.07279999999999999
   },
   {
     "board_index": 25,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.832
+    "execution_time_ms": 0.1305
   },
   {
     "board_index": 26,
@@ -240,7 +240,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 223.2801
+    "execution_time_ms": 0.0847
   },
   {
     "board_index": 27,
@@ -249,16 +249,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 221.1257
+    "execution_time_ms": 0.0966
   },
   {
     "board_index": 28,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.5234
+    "execution_time_ms": 0.1185
   },
   {
     "board_index": 29,
@@ -267,7 +267,7 @@
       1
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.175
+    "execution_time_ms": 0.1318
   },
   {
     "board_index": 30,
@@ -276,7 +276,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 224.91340000000002
+    "execution_time_ms": 0.0897
   },
   {
     "board_index": 31,
@@ -285,7 +285,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 223.4854
+    "execution_time_ms": 0.097
   },
   {
     "board_index": 32,
@@ -294,16 +294,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.9655
+    "execution_time_ms": 0.0945
   },
   {
     "board_index": 33,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.2655
+    "execution_time_ms": 0.09519999999999999
   },
   {
     "board_index": 34,
@@ -312,7 +312,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.754
+    "execution_time_ms": 0.1128
   },
   {
     "board_index": 35,
@@ -321,16 +321,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.26409999999998
+    "execution_time_ms": 0.0745
   },
   {
     "board_index": 36,
     "best_move": [
       0,
-      0
+      2
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.85999999999999
+    "execution_time_ms": 0.1055
   },
   {
     "board_index": 37,
@@ -339,16 +339,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.7228
+    "execution_time_ms": 0.1428
   },
   {
     "board_index": 38,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.0599
+    "execution_time_ms": 0.155
   },
   {
     "board_index": 39,
@@ -357,16 +357,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 222.28029999999998
+    "execution_time_ms": 0.0847
   },
   {
     "board_index": 40,
     "best_move": [
       0,
-      1
+      3
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.492
+    "execution_time_ms": 0.07619999999999999
   },
   {
     "board_index": 41,
@@ -375,7 +375,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 220.444
+    "execution_time_ms": 0.096
   },
   {
     "board_index": 42,
@@ -384,7 +384,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.1069
+    "execution_time_ms": 0.0743
   },
   {
     "board_index": 43,
@@ -393,7 +393,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.7406
+    "execution_time_ms": 0.1809
   },
   {
     "board_index": 44,
@@ -402,7 +402,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.0634
+    "execution_time_ms": 0.1167
   },
   {
     "board_index": 45,
@@ -411,25 +411,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.5242
+    "execution_time_ms": 0.09670000000000001
   },
   {
     "board_index": 46,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.9197
+    "execution_time_ms": 0.0889
   },
   {
     "board_index": 47,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.1361
+    "execution_time_ms": 0.0957
   },
   {
     "board_index": 48,
@@ -438,43 +438,43 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 220.874
+    "execution_time_ms": 0.1296
   },
   {
     "board_index": 49,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.0661
+    "execution_time_ms": 0.1
   },
   {
     "board_index": 50,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.8469
+    "execution_time_ms": 0.09899999999999999
   },
   {
     "board_index": 51,
     "best_move": [
-      0,
+      1,
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 220.49099999999999
+    "execution_time_ms": 0.0959
   },
   {
     "board_index": 52,
     "best_move": [
       0,
-      0
+      4
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.1665
+    "execution_time_ms": 0.1065
   },
   {
     "board_index": 53,
@@ -483,16 +483,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.46589999999998
+    "execution_time_ms": 0.1525
   },
   {
     "board_index": 54,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.69740000000002
+    "execution_time_ms": 0.0736
   },
   {
     "board_index": 55,
@@ -501,7 +501,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 221.2174
+    "execution_time_ms": 0.0965
   },
   {
     "board_index": 56,
@@ -510,16 +510,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.8773
+    "execution_time_ms": 0.1207
   },
   {
     "board_index": 57,
     "best_move": [
       0,
-      0
+      2
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.8682
+    "execution_time_ms": 0.0941
   },
   {
     "board_index": 58,
@@ -528,7 +528,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 221.32760000000002
+    "execution_time_ms": 0.1297
   },
   {
     "board_index": 59,
@@ -537,16 +537,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 223.1175
+    "execution_time_ms": 0.07279999999999999
   },
   {
     "board_index": 60,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.6309
+    "execution_time_ms": 0.0943
   },
   {
     "board_index": 61,
@@ -555,16 +555,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.6015
+    "execution_time_ms": 0.1067
   },
   {
     "board_index": 62,
     "best_move": [
       0,
-      0
+      2
     ],
     "probability": 1.0,
-    "execution_time_ms": 221.9805
+    "execution_time_ms": 0.094
   },
   {
     "board_index": 63,
@@ -573,16 +573,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.831
+    "execution_time_ms": 0.1066
   },
   {
     "board_index": 64,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.9976
+    "execution_time_ms": 0.1192
   },
   {
     "board_index": 65,
@@ -591,7 +591,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.0011
+    "execution_time_ms": 0.1079
   },
   {
     "board_index": 66,
@@ -600,7 +600,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.5765
+    "execution_time_ms": 0.20320000000000002
   },
   {
     "board_index": 67,
@@ -609,7 +609,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.89249999999998
+    "execution_time_ms": 0.1467
   },
   {
     "board_index": 68,
@@ -618,16 +618,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.29989999999998
+    "execution_time_ms": 0.0929
   },
   {
     "board_index": 69,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.64749999999998
+    "execution_time_ms": 0.0999
   },
   {
     "board_index": 70,
@@ -636,7 +636,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.1111
+    "execution_time_ms": 0.097
   },
   {
     "board_index": 71,
@@ -645,7 +645,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.7646
+    "execution_time_ms": 0.2759
   },
   {
     "board_index": 72,
@@ -654,7 +654,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.4836
+    "execution_time_ms": 0.1855
   },
   {
     "board_index": 73,
@@ -663,25 +663,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.7632
+    "execution_time_ms": 0.1044
   },
   {
     "board_index": 74,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.51899999999998
+    "execution_time_ms": 0.108
   },
   {
     "board_index": 75,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.68
+    "execution_time_ms": 0.1144
   },
   {
     "board_index": 76,
@@ -690,16 +690,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.6127
+    "execution_time_ms": 0.1177
   },
   {
     "board_index": 77,
     "best_move": [
       0,
-      0
+      2
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.8115
+    "execution_time_ms": 0.0863
   },
   {
     "board_index": 78,
@@ -708,16 +708,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.0729
+    "execution_time_ms": 0.1087
   },
   {
     "board_index": 79,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.749
+    "execution_time_ms": 0.1023
   },
   {
     "board_index": 80,
@@ -726,7 +726,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.3787
+    "execution_time_ms": 0.1179
   },
   {
     "board_index": 81,
@@ -735,25 +735,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.2559
+    "execution_time_ms": 0.1179
   },
   {
     "board_index": 82,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.0298
+    "execution_time_ms": 0.1327
   },
   {
     "board_index": 83,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.6628
+    "execution_time_ms": 0.1075
   },
   {
     "board_index": 84,
@@ -762,43 +762,43 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 229.04840000000002
+    "execution_time_ms": 0.08339999999999999
   },
   {
     "board_index": 85,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.2489
+    "execution_time_ms": 0.08789999999999999
   },
   {
     "board_index": 86,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 230.26260000000002
+    "execution_time_ms": 0.11900000000000001
   },
   {
     "board_index": 87,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.80949999999999
+    "execution_time_ms": 0.0959
   },
   {
     "board_index": 88,
     "best_move": [
       0,
-      0
+      3
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.2744
+    "execution_time_ms": 0.1062
   },
   {
     "board_index": 89,
@@ -807,25 +807,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.7913
+    "execution_time_ms": 0.1078
   },
   {
     "board_index": 90,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.9685
+    "execution_time_ms": 0.1202
   },
   {
     "board_index": 91,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.5234
+    "execution_time_ms": 0.0976
   },
   {
     "board_index": 92,
@@ -834,25 +834,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.5992
+    "execution_time_ms": 0.116
   },
   {
     "board_index": 93,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.3257
+    "execution_time_ms": 0.134
   },
   {
     "board_index": 94,
     "best_move": [
       0,
-      0
+      2
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.5134
+    "execution_time_ms": 0.074
   },
   {
     "board_index": 95,
@@ -861,7 +861,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.1923
+    "execution_time_ms": 0.1078
   },
   {
     "board_index": 96,
@@ -870,33 +870,33 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.27859999999998
+    "execution_time_ms": 0.1
   },
   {
     "board_index": 97,
     "best_move": [
       0,
-      1
+      3
     ],
     "probability": 1.0,
-    "execution_time_ms": 217.9527
+    "execution_time_ms": 0.0743
   },
   {
     "board_index": 98,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.0558
+    "execution_time_ms": 0.1285
   },
   {
     "board_index": 99,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.7312
+    "execution_time_ms": 0.10830000000000001
   }
 ]

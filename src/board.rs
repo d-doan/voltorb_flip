@@ -246,7 +246,39 @@ impl Board {
                     vec![1, 1, 1, 0]
                 ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
                 board_dim: 3
+            },PremadeBoard {
+                solution: Board::from_tiles(vec![
+                    vec![66, 3, 1, 2],
+                    vec![1, 2, 3, 66],
+                    vec![3, 1, 66, 2],
+                    vec![2, 66, 3, 1]
+                ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+                initial: Board::from_tiles(vec![
+                    vec![0, 0, 0, 0],
+                    vec![0, 0, 0, 0],
+                    vec![0, 0, 0, 0],
+                    vec![0, 0, 0, 0]
+                ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+                board_dim: 5
             },
+            // Too much computation :((( non-determinism is hard
+            // PremadeBoard {
+            //     solution: Board::from_tiles(vec![
+            //         vec![66, 3, 1, 2, 1],
+            //         vec![1, 2, 3, 66, 1],
+            //         vec![3, 1, 66, 2, 1],
+            //         vec![2, 66, 3, 1, 2],
+            //         vec![1, 2, 1, 3, 66]
+            //     ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+            //     initial: Board::from_tiles(vec![
+            //         vec![0, 0, 0, 0, 0],
+            //         vec![0, 0, 0, 0, 0],
+            //         vec![0, 0, 0, 0, 0],
+            //         vec![0, 0, 0, 0, 0],
+            //         vec![0, 0, 0, 0, 0]
+            //     ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+            //     board_dim: 5
+            // },
         ]
     }
 }

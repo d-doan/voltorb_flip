@@ -159,4 +159,8 @@ impl Game {
         println!("Your score is: {}", self.score);
     }
 
+    pub fn get_sol(&self) -> Board {
+        return self.sol_board.clone();
+    }
+
 }
