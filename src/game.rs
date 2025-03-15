@@ -96,7 +96,7 @@ impl Game {
     pub fn display_board(&self) {
         let board_dim = self.curr_board.get_board_dim();
         let green_square = "🟩";
-        let numbers = [" ", "1️⃣", "2️⃣", "3️⃣", "💥", "💀"];
+        let numbers = [" ", " 1️⃣   ", " 2️⃣   ", " 3️⃣   ", "💥", "💀"];
 
         // Offset for row labels
         print!("     ");
