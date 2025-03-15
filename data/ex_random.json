@@ -1,0 +1,902 @@
+[
+  {
+    "board_index": 0,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.7481
+  },
+  {
+    "board_index": 1,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.1495
+  },
+  {
+    "board_index": 2,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.6197
+  },
+  {
+    "board_index": 3,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 225.3367
+  },
+  {
+    "board_index": 4,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.8731
+  },
+  {
+    "board_index": 5,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.6454
+  },
+  {
+    "board_index": 6,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 225.44819999999999
+  },
+  {
+    "board_index": 7,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 223.6989
+  },
+  {
+    "board_index": 8,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.7045
+  },
+  {
+    "board_index": 9,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 227.1141
+  },
+  {
+    "board_index": 10,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.4445
+  },
+  {
+    "board_index": 11,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.02710000000002
+  },
+  {
+    "board_index": 12,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 227.01930000000002
+  },
+  {
+    "board_index": 13,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.2069
+  },
+  {
+    "board_index": 14,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.15630000000002
+  },
+  {
+    "board_index": 15,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 231.0849
+  },
+  {
+    "board_index": 16,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 227.3929
+  },
+  {
+    "board_index": 17,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.1803
+  },
+  {
+    "board_index": 18,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 225.26080000000002
+  },
+  {
+    "board_index": 19,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.81560000000002
+  },
+  {
+    "board_index": 20,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 227.418
+  },
+  {
+    "board_index": 21,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.50039999999998
+  },
+  {
+    "board_index": 22,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.5485
+  },
+  {
+    "board_index": 23,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 225.476
+  },
+  {
+    "board_index": 24,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 232.7923
+  },
+  {
+    "board_index": 25,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.3074
+  },
+  {
+    "board_index": 26,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.0869
+  },
+  {
+    "board_index": 27,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 236.13799999999998
+  },
+  {
+    "board_index": 28,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.21959999999999
+  },
+  {
+    "board_index": 29,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.6609
+  },
+  {
+    "board_index": 30,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.78199999999998
+  },
+  {
+    "board_index": 31,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.2663
+  },
+  {
+    "board_index": 32,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.2207
+  },
+  {
+    "board_index": 33,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.3953
+  },
+  {
+    "board_index": 34,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.19490000000002
+  },
+  {
+    "board_index": 35,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.946
+  },
+  {
+    "board_index": 36,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.3642
+  },
+  {
+    "board_index": 37,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.13539999999998
+  },
+  {
+    "board_index": 38,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 229.60559999999998
+  },
+  {
+    "board_index": 39,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 236.4957
+  },
+  {
+    "board_index": 40,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.01950000000002
+  },
+  {
+    "board_index": 41,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.2647
+  },
+  {
+    "board_index": 42,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.88340000000002
+  },
+  {
+    "board_index": 43,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.2614
+  },
+  {
+    "board_index": 44,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 223.7246
+  },
+  {
+    "board_index": 45,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 222.0307
+  },
+  {
+    "board_index": 46,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 220.40390000000002
+  },
+  {
+    "board_index": 47,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.6235
+  },
+  {
+    "board_index": 48,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 229.0304
+  },
+  {
+    "board_index": 49,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 237.732
+  },
+  {
+    "board_index": 50,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 225.0069
+  },
+  {
+    "board_index": 51,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.2986
+  },
+  {
+    "board_index": 52,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 227.948
+  },
+  {
+    "board_index": 53,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.0868
+  },
+  {
+    "board_index": 54,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.7011
+  },
+  {
+    "board_index": 55,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 229.9966
+  },
+  {
+    "board_index": 56,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 229.8982
+  },
+  {
+    "board_index": 57,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 231.0708
+  },
+  {
+    "board_index": 58,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.6934
+  },
+  {
+    "board_index": 59,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.0155
+  },
+  {
+    "board_index": 60,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.2491
+  },
+  {
+    "board_index": 61,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.6018
+  },
+  {
+    "board_index": 62,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 227.4555
+  },
+  {
+    "board_index": 63,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 219.8821
+  },
+  {
+    "board_index": 64,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 235.5009
+  },
+  {
+    "board_index": 65,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 234.3108
+  },
+  {
+    "board_index": 66,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.7467
+  },
+  {
+    "board_index": 67,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.5393
+  },
+  {
+    "board_index": 68,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.822
+  },
+  {
+    "board_index": 69,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.89329999999998
+  },
+  {
+    "board_index": 70,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.5865
+  },
+  {
+    "board_index": 71,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 223.8177
+  },
+  {
+    "board_index": 72,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 227.8883
+  },
+  {
+    "board_index": 73,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 231.18820000000002
+  },
+  {
+    "board_index": 74,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 231.1955
+  },
+  {
+    "board_index": 75,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 231.74900000000002
+  },
+  {
+    "board_index": 76,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 229.63430000000002
+  },
+  {
+    "board_index": 77,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 231.1358
+  },
+  {
+    "board_index": 78,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 229.28789999999998
+  },
+  {
+    "board_index": 79,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 230.79649999999998
+  },
+  {
+    "board_index": 80,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.9635
+  },
+  {
+    "board_index": 81,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 225.52179999999998
+  },
+  {
+    "board_index": 82,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 225.8821
+  },
+  {
+    "board_index": 83,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 229.01579999999998
+  },
+  {
+    "board_index": 84,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 231.1743
+  },
+  {
+    "board_index": 85,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.35739999999998
+  },
+  {
+    "board_index": 86,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 225.7106
+  },
+  {
+    "board_index": 87,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 221.2184
+  },
+  {
+    "board_index": 88,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 225.0698
+  },
+  {
+    "board_index": 89,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 220.3237
+  },
+  {
+    "board_index": 90,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 221.64339999999999
+  },
+  {
+    "board_index": 91,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 223.6421
+  },
+  {
+    "board_index": 92,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.6952
+  },
+  {
+    "board_index": 93,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 228.7614
+  },
+  {
+    "board_index": 94,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.1894
+  },
+  {
+    "board_index": 95,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.6925
+  },
+  {
+    "board_index": 96,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.0236
+  },
+  {
+    "board_index": 97,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 224.5013
+  },
+  {
+    "board_index": 98,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 227.4174
+  },
+  {
+    "board_index": 99,
+    "best_move": [
+      0,
+      0
+    ],
+    "probability": 1.0,
+    "execution_time_ms": 226.2074
+  }
+]

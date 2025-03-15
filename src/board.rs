@@ -218,6 +218,21 @@ impl Board {
                 ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
                 board_dim: 3
             },
+            PremadeBoard {
+                solution: Board::from_tiles(vec![
+                    vec![66, 1, 1, 1],
+                    vec![1, 66, 1, 1],
+                    vec![1, 1, 66, 1],
+                    vec![1, 1, 1, 66]
+                ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+                initial: Board::from_tiles(vec![
+                    vec![0, 0, 0, 1],
+                    vec![0, 0, 0, 1],
+                    vec![0, 0, 0, 1],
+                    vec![1, 1, 1, 0]
+                ].into_iter().map(|row| row.into_iter().map(TileValue::to_enum).collect()).collect()),
+                board_dim: 3
+            },
         ]
     }
 }
