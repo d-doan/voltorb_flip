@@ -9,6 +9,7 @@ use game::Game;
 use game::GameState;
 use solver::exhaustive;
 use simulation::run_simulation;
+use solver::optimized_solver;
 
 fn main() {
     run_simulation();
@@ -53,15 +54,16 @@ fn main() {
 
     // println!("{}", board_dim_input);
 
-    let mut game = Game::new(board_dim_input, custom_board);
+    let mut game = Game::new(board_dim_input, custom_board, None, None, None);
     let board_dim = game.curr_board.get_board_dim();
 
     println!("\nCurrent Board:");
 
     // println!("Running exhaustive solver...");
-    // let baseline: ((usize, usize), f32) = exhaustive(&mut game);
-    let baseline= ((0_usize, 0_usize), -1.0);
-    game.display_board(baseline);
+    // let guess: ((usize, usize), f32) = exhaustive(&mut game);
+    let guess: ((usize, usize), f32) = optimized_solver(&mut game);
+    // let guess= ((0_usize, 0_usize), -1.0);
+    game.display_board(guess);
 
     loop {
         println!("\nEnter row and column to flip (e.g., '1 2') or type 'q' to quit:");
@@ -96,9 +98,10 @@ fn main() {
 
         println!("\nCurrent Board:");
         // println!("Running exhaustive solver...");
-        // let baseline: ((usize, usize), f32) = exhaustive(&mut game);
-        let baseline= ((0_usize, 0_usize), -1.0);
-        game.display_board(baseline);
+        // let guess: ((usize, usize), f32) = exhaustive(&mut game);
+        let guess: ((usize, usize), f32) = optimized_solver(&mut game);
+        // let guess= ((0_usize, 0_usize), -1.0);
+        game.display_board(guess);
 
         match result {
             GameState::Won => {

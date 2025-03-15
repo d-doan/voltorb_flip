@@ -3,10 +3,10 @@
     "board_index": 0,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 221.0936
+    "execution_time_ms": 0.0524
   },
   {
     "board_index": 1,
@@ -15,7 +15,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.4168
+    "execution_time_ms": 0.048900000000000006
   },
   {
     "board_index": 2,
@@ -24,7 +24,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.0939
+    "execution_time_ms": 0.048900000000000006
   },
   {
     "board_index": 3,
@@ -33,16 +33,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 223.80790000000002
+    "execution_time_ms": 0.048600000000000004
   },
   {
     "board_index": 4,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.692
+    "execution_time_ms": 0.050899999999999994
   },
   {
     "board_index": 5,
@@ -51,16 +51,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.9257
+    "execution_time_ms": 0.0527
   },
   {
     "board_index": 6,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.6363
+    "execution_time_ms": 0.051199999999999996
   },
   {
     "board_index": 7,
@@ -69,7 +69,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.7638
+    "execution_time_ms": 0.0475
   },
   {
     "board_index": 8,
@@ -78,7 +78,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.3663
+    "execution_time_ms": 0.0523
   },
   {
     "board_index": 9,
@@ -87,7 +87,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.19199999999998
+    "execution_time_ms": 0.048900000000000006
   },
   {
     "board_index": 10,
@@ -96,7 +96,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.13
+    "execution_time_ms": 0.0505
   },
   {
     "board_index": 11,
@@ -105,7 +105,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.4486
+    "execution_time_ms": 0.0467
   },
   {
     "board_index": 12,
@@ -114,7 +114,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.49530000000001
+    "execution_time_ms": 0.048
   },
   {
     "board_index": 13,
@@ -123,25 +123,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.0479
+    "execution_time_ms": 0.0497
   },
   {
     "board_index": 14,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.4625
+    "execution_time_ms": 0.048
   },
   {
     "board_index": 15,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.18210000000002
+    "execution_time_ms": 0.0466
   },
   {
     "board_index": 16,
@@ -150,7 +150,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.6962
+    "execution_time_ms": 0.05450000000000001
   },
   {
     "board_index": 17,
@@ -159,7 +159,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.2207
+    "execution_time_ms": 0.0483
   },
   {
     "board_index": 18,
@@ -168,16 +168,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.4182
+    "execution_time_ms": 0.0522
   },
   {
     "board_index": 19,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.1464
+    "execution_time_ms": 0.0533
   },
   {
     "board_index": 20,
@@ -186,16 +186,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.2095
+    "execution_time_ms": 0.0523
   },
   {
     "board_index": 21,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.398
+    "execution_time_ms": 0.0504
   },
   {
     "board_index": 22,
@@ -204,7 +204,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.1567
+    "execution_time_ms": 0.0484
   },
   {
     "board_index": 23,
@@ -213,7 +213,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.68400000000003
+    "execution_time_ms": 0.046900000000000004
   },
   {
     "board_index": 24,
@@ -222,7 +222,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.7173
+    "execution_time_ms": 0.0481
   },
   {
     "board_index": 25,
@@ -231,7 +231,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.1038
+    "execution_time_ms": 0.0463
   },
   {
     "board_index": 26,
@@ -240,7 +240,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.4971
+    "execution_time_ms": 0.0552
   },
   {
     "board_index": 27,
@@ -249,7 +249,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.0097
+    "execution_time_ms": 0.047
   },
   {
     "board_index": 28,
@@ -258,7 +258,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.8616
+    "execution_time_ms": 0.047599999999999996
   },
   {
     "board_index": 29,
@@ -267,7 +267,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.042
+    "execution_time_ms": 0.0527
   },
   {
     "board_index": 30,
@@ -276,7 +276,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.0049
+    "execution_time_ms": 0.0485
   },
   {
     "board_index": 31,
@@ -285,7 +285,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.00549999999998
+    "execution_time_ms": 0.046
   },
   {
     "board_index": 32,
@@ -294,7 +294,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.38070000000002
+    "execution_time_ms": 0.053
   },
   {
     "board_index": 33,
@@ -303,7 +303,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 209.4106
+    "execution_time_ms": 0.0458
   },
   {
     "board_index": 34,
@@ -312,7 +312,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.3003
+    "execution_time_ms": 0.0524
   },
   {
     "board_index": 35,
@@ -321,7 +321,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 209.6818
+    "execution_time_ms": 0.050899999999999994
   },
   {
     "board_index": 36,
@@ -330,7 +330,7 @@
       1
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.3307
+    "execution_time_ms": 0.054799999999999995
   },
   {
     "board_index": 37,
@@ -339,7 +339,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.48899999999998
+    "execution_time_ms": 0.0547
   },
   {
     "board_index": 38,
@@ -348,7 +348,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.7975
+    "execution_time_ms": 0.0523
   },
   {
     "board_index": 39,
@@ -357,7 +357,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.1082
+    "execution_time_ms": 0.0493
   },
   {
     "board_index": 40,
@@ -366,7 +366,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 209.886
+    "execution_time_ms": 0.0516
   },
   {
     "board_index": 41,
@@ -375,25 +375,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 209.8452
+    "execution_time_ms": 0.0515
   },
   {
     "board_index": 42,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 209.8998
+    "execution_time_ms": 0.0488
   },
   {
     "board_index": 43,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.5517
+    "execution_time_ms": 0.0471
   },
   {
     "board_index": 44,
@@ -402,7 +402,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 208.7559
+    "execution_time_ms": 0.054799999999999995
   },
   {
     "board_index": 45,
@@ -411,25 +411,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.786
+    "execution_time_ms": 0.0502
   },
   {
     "board_index": 46,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.0163
+    "execution_time_ms": 0.0563
   },
   {
     "board_index": 47,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.94850000000002
+    "execution_time_ms": 0.0461
   },
   {
     "board_index": 48,
@@ -438,7 +438,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.6392
+    "execution_time_ms": 0.0479
   },
   {
     "board_index": 49,
@@ -447,25 +447,25 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.2472
+    "execution_time_ms": 0.0523
   },
   {
     "board_index": 50,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.1669
+    "execution_time_ms": 0.0498
   },
   {
     "board_index": 51,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.7181
+    "execution_time_ms": 0.0504
   },
   {
     "board_index": 52,
@@ -474,7 +474,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.0804
+    "execution_time_ms": 0.0516
   },
   {
     "board_index": 53,
@@ -483,7 +483,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.8125
+    "execution_time_ms": 0.052
   },
   {
     "board_index": 54,
@@ -492,7 +492,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 209.976
+    "execution_time_ms": 0.0458
   },
   {
     "board_index": 55,
@@ -501,7 +501,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.87439999999998
+    "execution_time_ms": 0.047599999999999996
   },
   {
     "board_index": 56,
@@ -510,7 +510,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.25220000000002
+    "execution_time_ms": 0.0479
   },
   {
     "board_index": 57,
@@ -519,7 +519,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.8158
+    "execution_time_ms": 0.0533
   },
   {
     "board_index": 58,
@@ -528,7 +528,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.3824
+    "execution_time_ms": 0.05
   },
   {
     "board_index": 59,
@@ -537,7 +537,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.957
+    "execution_time_ms": 0.0466
   },
   {
     "board_index": 60,
@@ -546,7 +546,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.0175
+    "execution_time_ms": 0.0552
   },
   {
     "board_index": 61,
@@ -555,7 +555,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.219
+    "execution_time_ms": 0.0523
   },
   {
     "board_index": 62,
@@ -564,7 +564,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.803
+    "execution_time_ms": 0.047
   },
   {
     "board_index": 63,
@@ -573,7 +573,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.0301
+    "execution_time_ms": 0.0487
   },
   {
     "board_index": 64,
@@ -582,7 +582,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.65390000000002
+    "execution_time_ms": 0.049499999999999995
   },
   {
     "board_index": 65,
@@ -591,16 +591,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.5969
+    "execution_time_ms": 0.0535
   },
   {
     "board_index": 66,
     "best_move": [
       0,
-      1
+      0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.6568
+    "execution_time_ms": 0.049499999999999995
   },
   {
     "board_index": 67,
@@ -609,7 +609,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.75840000000002
+    "execution_time_ms": 0.0485
   },
   {
     "board_index": 68,
@@ -618,7 +618,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.37290000000002
+    "execution_time_ms": 0.0518
   },
   {
     "board_index": 69,
@@ -627,7 +627,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.68429999999998
+    "execution_time_ms": 0.045599999999999995
   },
   {
     "board_index": 70,
@@ -636,7 +636,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.98919999999998
+    "execution_time_ms": 0.0515
   },
   {
     "board_index": 71,
@@ -645,7 +645,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.9662
+    "execution_time_ms": 0.0513
   },
   {
     "board_index": 72,
@@ -654,7 +654,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.3868
+    "execution_time_ms": 0.056799999999999996
   },
   {
     "board_index": 73,
@@ -663,7 +663,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.8786
+    "execution_time_ms": 0.046400000000000004
   },
   {
     "board_index": 74,
@@ -672,7 +672,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.5247
+    "execution_time_ms": 0.0478
   },
   {
     "board_index": 75,
@@ -681,7 +681,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.5744
+    "execution_time_ms": 0.0518
   },
   {
     "board_index": 76,
@@ -690,7 +690,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.033
+    "execution_time_ms": 0.055600000000000004
   },
   {
     "board_index": 77,
@@ -699,7 +699,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.4811
+    "execution_time_ms": 0.0451
   },
   {
     "board_index": 78,
@@ -708,7 +708,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.2484
+    "execution_time_ms": 0.052899999999999996
   },
   {
     "board_index": 79,
@@ -717,7 +717,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 224.33429999999998
+    "execution_time_ms": 0.0465
   },
   {
     "board_index": 80,
@@ -726,7 +726,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.8956
+    "execution_time_ms": 0.0543
   },
   {
     "board_index": 81,
@@ -735,7 +735,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 218.72379999999998
+    "execution_time_ms": 0.0563
   },
   {
     "board_index": 82,
@@ -744,7 +744,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.61610000000002
+    "execution_time_ms": 0.054200000000000005
   },
   {
     "board_index": 83,
@@ -753,7 +753,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.2688
+    "execution_time_ms": 0.05450000000000001
   },
   {
     "board_index": 84,
@@ -762,7 +762,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.0125
+    "execution_time_ms": 0.0475
   },
   {
     "board_index": 85,
@@ -771,16 +771,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.67759999999998
+    "execution_time_ms": 0.0625
   },
   {
     "board_index": 86,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.35969999999998
+    "execution_time_ms": 0.0505
   },
   {
     "board_index": 87,
@@ -789,7 +789,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.1019
+    "execution_time_ms": 0.0477
   },
   {
     "board_index": 88,
@@ -798,16 +798,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 213.6132
+    "execution_time_ms": 0.0477
   },
   {
     "board_index": 89,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 215.38070000000002
+    "execution_time_ms": 0.0507
   },
   {
     "board_index": 90,
@@ -816,16 +816,16 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 212.0308
+    "execution_time_ms": 0.048600000000000004
   },
   {
     "board_index": 91,
     "best_move": [
       0,
-      0
+      1
     ],
     "probability": 1.0,
-    "execution_time_ms": 211.85670000000002
+    "execution_time_ms": 0.0494
   },
   {
     "board_index": 92,
@@ -834,7 +834,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 210.09900000000002
+    "execution_time_ms": 0.0518
   },
   {
     "board_index": 93,
@@ -843,7 +843,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 214.5783
+    "execution_time_ms": 0.0492
   },
   {
     "board_index": 94,
@@ -852,7 +852,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 223.0343
+    "execution_time_ms": 0.0497
   },
   {
     "board_index": 95,
@@ -861,7 +861,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 216.9729
+    "execution_time_ms": 0.0478
   },
   {
     "board_index": 96,
@@ -870,7 +870,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 223.34699999999998
+    "execution_time_ms": 0.057
   },
   {
     "board_index": 97,
@@ -879,7 +879,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 225.5033
+    "execution_time_ms": 0.0579
   },
   {
     "board_index": 98,
@@ -888,7 +888,7 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.2722
+    "execution_time_ms": 0.0668
   },
   {
     "board_index": 99,
@@ -897,6 +897,6 @@
       0
     ],
     "probability": 1.0,
-    "execution_time_ms": 219.7598
+    "execution_time_ms": 0.0492
   }
 ]

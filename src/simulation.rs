@@ -4,7 +4,7 @@ use std::time::Instant;
 use serde::{Serialize, Deserialize};
 use crate::board::Board;
 use crate::game::Game;
-use crate::solver::exhaustive;
+use crate::solver::{exhaustive, optimized_solver};
 
 #[derive(Serialize, Deserialize, Debug)]
 struct SimulationResult {
@@ -24,7 +24,8 @@ pub fn run_simulation() {
 // Runs simulation on premade boards
 fn run_premade_boards() {
     let premade_boards = Board::premade_boards();
-    let mut results = Vec::new();
+    let mut ex_results = Vec::new();
+    let mut opt_results = Vec::new();
 
     print!("Running Premade Board at index: ");
     stdout().flush().unwrap();
@@ -34,30 +35,43 @@ fn run_premade_boards() {
         print!("{}... ", board_index);
         stdout().flush().unwrap();
 
-        let mut game = Game::new(premade_board.get_board_dim(), Some(premade_board.clone()));
+        let mut ex_game = Game::new(premade_board.get_board_dim(), Some(premade_board.clone()), None, None, None);
+        let mut opt_game = Game::new(premade_board.get_board_dim(), Some(premade_board.clone()), None, None, None);
 
-        // Start timing
+        // Run exhaustive solver
         let start_time = Instant::now();
-        let best_move = exhaustive(&mut game);
-        let elapsed_time = start_time.elapsed().as_secs_f64() * 1000.0; // Convert to milliseconds
+        let best_move_ex = exhaustive(&mut ex_game);
+        let elapsed_time_ex = start_time.elapsed().as_secs_f64() * 1000.0;
 
-        // Prepare result
-        let result = SimulationResult {
+        // Run optimized solver
+        let start_time = Instant::now();
+        let best_move_opt = optimized_solver(&mut opt_game);
+        let elapsed_time_opt = start_time.elapsed().as_secs_f64() * 1000.0;
+
+        // Prepare results
+        ex_results.push(SimulationResult {
             board_index,
-            best_move: best_move.0,
-            probability: best_move.1,
-            execution_time_ms: elapsed_time,
-        };
+            best_move: best_move_ex.0,
+            probability: best_move_ex.1,
+            execution_time_ms: elapsed_time_ex,
+        });
 
-        results.push(result);
+        opt_results.push(SimulationResult {
+            board_index,
+            best_move: best_move_opt.0,
+            probability: best_move_opt.1,
+            execution_time_ms: elapsed_time_opt,
+        });
     }
-
-    save_to_json("ex_premade.json", &results);
+    // Save results
+    save_to_json("ex_premade.json", &ex_results);
+    save_to_json("opt_premade.json", &opt_results);
 }
 
 // Runs simulation on random boards
 fn run_random_boards(num_boards: usize, board_size: usize) {
-    let mut results = Vec::new();
+    let mut ex_results = Vec::new();
+    let mut opt_results = Vec::new();
 
     print!("Running Random Board #: ");
     stdout().flush().unwrap();
@@ -69,30 +83,42 @@ fn run_random_boards(num_boards: usize, board_size: usize) {
         print!("{}...", i);
         stdout().flush().unwrap();
 
-        let mut game = Game::new(board_size, None);
+        let mut ex_game = Game::new(board_size, None, None, None, None);
+        let mut opt_game = Game::new(board_size, None, None, None, None);
 
-        // Start timing
+        // Run exhaustive solver
         let start_time = Instant::now();
-        let best_move = exhaustive(&mut game);
-        let elapsed_time = start_time.elapsed().as_secs_f64() * 1000.0; // Convert to milliseconds
+        let best_move_ex = exhaustive(&mut ex_game);
+        let elapsed_time_ex = start_time.elapsed().as_secs_f64() * 1000.0;
 
-        // Prepare result
-        let result = SimulationResult {
+        // Run optimized solver
+        let start_time = Instant::now();
+        let best_move_opt = optimized_solver(&mut opt_game);
+        let elapsed_time_opt = start_time.elapsed().as_secs_f64() * 1000.0;
+
+        // Prepare results
+        ex_results.push(SimulationResult {
             board_index: i,
-            best_move: best_move.0,
-            probability: best_move.1,
-            execution_time_ms: elapsed_time,
-        };
+            best_move: best_move_ex.0,
+            probability: best_move_ex.1,
+            execution_time_ms: elapsed_time_ex,
+        });
 
-        results.push(result);
+        opt_results.push(SimulationResult {
+            board_index: i,
+            best_move: best_move_opt.0,
+            probability: best_move_opt.1,
+            execution_time_ms: elapsed_time_opt,
+        });
     }
-
-    save_to_json("ex_random.json", &results);
+    // Save results
+    save_to_json("ex_random.json", &ex_results);
+    save_to_json("opt_random.json", &opt_results);
 }
 
 // Helper function to save results to JSON
 fn save_to_json(filename: &str, results: &Vec<SimulationResult>) {
-    let path = format!("data/{}", filename); // Save inside `data/`
+    let path = format!("data/{}", filename);
     let json_data = serde_json::to_string_pretty(results).expect("Failed to serialize JSON");
     let mut file = File::create(&path).expect("Failed to create file");
     file.write_all(json_data.as_bytes()).expect("Failed to write JSON");

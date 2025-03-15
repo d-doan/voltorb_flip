@@ -17,12 +17,17 @@ pub struct Game {
 }
 
 impl Game {
-    pub fn new(board_dim: usize, custom_board: Option<PremadeBoard>) -> Game {
+    pub fn new(
+        board_dim: usize,
+        custom_board: Option<PremadeBoard>,
+        num_twos: Option<usize>,
+        num_threes: Option<usize>,
+        num_voltorbs: Option<usize>,) -> Game {
         let (sol_board, curr_board) = match custom_board {
             Some(premade) => (premade.solution, premade.initial),
             None => {
                 let mut generated_board = Board::new(board_dim, TileValue::Hidden);
-                generated_board.create_solution();
+                generated_board.create_solution(num_twos, num_threes, num_voltorbs);
                 let curr_board = Board::new(board_dim, TileValue::Hidden);
                 (generated_board, curr_board)
             }
@@ -147,7 +152,7 @@ impl Game {
             print!(" C{}    ", col);
         }
         println!();
-        println!{"Exhaustive says: \"You should pick ({} {}). This tile has a probability of {} to be safe.", guess.0.0, guess.0.1, guess.1}
+        println!{"Solver says: \"You should pick ({} {}). This tile has a probability of {} to be safe.", guess.0.0, guess.0.1, guess.1}
     }
 
     pub fn display_score(&self) {

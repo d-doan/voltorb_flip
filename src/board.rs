@@ -1,4 +1,4 @@
-use rand::{seq::SliceRandom, rng};
+use rand::{seq::SliceRandom, rng, Rng};
 
 
 #[derive(Clone)]
@@ -84,14 +84,28 @@ impl Board {
         self.tiles[i][j] = val;
     }
 
-    pub fn create_solution(&mut self) {
-        // dummy fixed values for testing
-        // randomly gen values later
-        let mut num_twos = 6;
-        let mut num_threes = 4;
-        let mut num_voltorbs = 3;
+    pub fn create_solution(
+        &mut self,
+        num_twos: Option<usize>,
+        num_threes: Option<usize>,
+        num_voltorbs: Option<usize>) {
+        let mut rng_thrd = rand::rng();
+        let max_tiles = self.board_dim * self.board_dim;
+
+        let mut num_twos = num_twos.unwrap_or(rng_thrd.random_range(1..max_tiles/4));
+        let mut num_threes = num_threes.unwrap_or(rng_thrd.random_range(1..max_tiles/4));
+        let mut num_voltorbs = num_voltorbs.unwrap_or(rng_thrd.random_range(1..max_tiles/4));
+
         let total_non_ones = num_twos + num_threes + num_voltorbs;
 
+        // Ensure total non-one tiles fit within board dimensions
+        if total_non_ones > max_tiles {
+            let scale_factor = max_tiles as f64 / total_non_ones as f64;
+            num_twos = (num_twos as f64 * scale_factor).floor() as usize;
+            num_threes = (num_threes as f64 * scale_factor).floor() as usize;
+            num_voltorbs = (num_voltorbs as f64 * scale_factor).floor() as usize;
+        }
+        
         // get all board positions and randomize
         let mut positions: Vec<(usize, usize)> = Vec::new();
         for row in 0..self.board_dim {
